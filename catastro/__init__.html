@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module __init__</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>__init__</strong></big></big> (version unknown)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/sergio/Proyectos/desarrollo/catastro-lib-python/catastro/__init__.py">/home/sergio/Proyectos/desarrollo/catastro-lib-python/catastro/__init__.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;coding=utf-8</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="xmltodict.html">xmltodict</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="__init__.html#Catastro">Catastro</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Catastro">class <strong>Catastro</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Library&nbsp;developed&nbsp;in&nbsp;python.&nbsp;This&nbsp;library&nbsp;allow&nbsp;to&nbsp;access&nbsp;the&nbsp;public&nbsp;web&nbsp;services&nbsp;of&nbsp;the&nbsp;Portal&nbsp;of&nbsp;Spanish&nbsp;<a href="#Catastro">Catastro</a>&nbsp;and&nbsp;obtains&nbsp;the&nbsp;results&nbsp;in&nbsp;json&nbsp;format.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Catastro-ConsultaDNPLOCJson"><strong>ConsultaDNPLOCJson</strong></a>(provincia, municipio, sigla, calle, numero, bloque=None, escalera=None, planta=None, puerta=None)</dt><dd><tt>Proporciona&nbsp;la&nbsp;lista&nbsp;de&nbsp;todos&nbsp;los&nbsp;inmuebles&nbsp;coincidentes&nbsp;o&nbsp;sus&nbsp;datos.<br>
+&nbsp;<br>
+Este&nbsp;servicio&nbsp;puede&nbsp;devolver&nbsp;o&nbsp;bien&nbsp;la&nbsp;lista&nbsp;de&nbsp;todos&nbsp;los&nbsp;inmuebles&nbsp;que<br>
+coinciden&nbsp;con&nbsp;los&nbsp;criterios&nbsp;de&nbsp;búsqueda,&nbsp;proporcionando&nbsp;para&nbsp;cada<br>
+inmueble&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;y&nbsp;su&nbsp;localización<br>
+(bloque/escalera/planta/puerta)&nbsp;o&nbsp;bien,&nbsp;en&nbsp;el&nbsp;caso&nbsp;de&nbsp;que&nbsp;solo&nbsp;exista<br>
+un&nbsp;inmueble&nbsp;con&nbsp;los&nbsp;parámetros&nbsp;de&nbsp;entrada&nbsp;indicados,&nbsp;proporciona&nbsp;los<br>
+datos&nbsp;de&nbsp;un&nbsp;inmueble.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Sigla<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;calle<br>
+:param&nbsp;str,int:&nbsp;Numero&nbsp;del&nbsp;que&nbsp;se&nbsp;quiere&nbsp;conocer&nbsp;los&nbsp;datos<br>
+:param&nbsp;str,int:&nbsp;Opcional,numero&nbsp;de&nbsp;bloque<br>
+:param&nbsp;str:&nbsp;Opcional,&nbsp;numero&nbsp;d'escala<br>
+:param&nbsp;str,int:&nbsp;Opcional,&nbsp;numero&nbsp;de&nbsp;planta<br>
+:param&nbsp;str,int:&nbsp;Opcional,&nbsp;numero&nbsp;de&nbsp;puerta<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="Catastro-ConsultaCPMRCJSon"><strong>ConsultaCPMRCJSon</strong></a>(municipio, srs, rc)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;la&nbsp;localizacion&nbsp;de&nbsp;una&nbsp;parcela.<br>
+&nbsp;<br>
+A&nbsp;partir&nbsp;de&nbsp;la&nbsp;RC&nbsp;de&nbsp;una&nbsp;parcela&nbsp;se&nbsp;obtienen&nbsp;las&nbsp;coordenadas&nbsp;X,&nbsp;Y&nbsp;en&nbsp;el<br>
+sistema&nbsp;de&nbsp;referencia&nbsp;en&nbsp;el&nbsp;que&nbsp;está&nbsp;almacenado&nbsp;el&nbsp;dato&nbsp;en&nbsp;la&nbsp;D.G.&nbsp;del<br>
+<a href="#Catastro">Catastro</a>,&nbsp;a&nbsp;menos&nbsp;que&nbsp;se&nbsp;especifique&nbsp;lo&nbsp;contrario&nbsp;en&nbsp;el&nbsp;parámetro<br>
+opcional&nbsp;SRS&nbsp;que&nbsp;se&nbsp;indica&nbsp;en&nbsp;la&nbsp;respuesta,&nbsp;así&nbsp;como&nbsp;el&nbsp;domicilio<br>
+(municipio,&nbsp;calle&nbsp;y&nbsp;número&nbsp;o&nbsp;polígono,&nbsp;parcela&nbsp;y&nbsp;unicipio).<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str,int:&nbsp;Sistema&nbsp;de&nbsp;coordenadas<br>
+:param&nbsp;str:&nbsp;Referencia&nbsp;catastral<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaDNPLOCCodigosJson"><strong>ConsultaDNPLOCCodigosJson</strong></a>(municipio, sigla, nombrevia, numero, bloque=None, escalera=None, planta=None, puerta=None)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;la&nbsp;lista&nbsp;de&nbsp;todos&nbsp;los&nbsp;inmuebles&nbsp;que&nbsp;coinciden.<br>
+&nbsp;<br>
+Este&nbsp;servicio&nbsp;puede&nbsp;devolver&nbsp;o&nbsp;bien&nbsp;la&nbsp;lista&nbsp;de&nbsp;todos&nbsp;los&nbsp;inmuebles&nbsp;que<br>
+coinciden&nbsp;con&nbsp;los&nbsp;criterios&nbsp;de&nbsp;búsqueda,&nbsp;proporcionando&nbsp;para&nbsp;cada<br>
+inmueble&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;y&nbsp;su&nbsp;localización<br>
+(bloque/escalera/planta/puerta)&nbsp;o&nbsp;bien,en&nbsp;el&nbsp;caso&nbsp;de&nbsp;que&nbsp;solo&nbsp;exista&nbsp;un<br>
+inmueble&nbsp;con&nbsp;los&nbsp;parámetros&nbsp;de&nbsp;entrada&nbsp;indicados,&nbsp;proporciona&nbsp;los&nbsp;datos<br>
+de&nbsp;un&nbsp;inmueble.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Sigla<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;via<br>
+:param&nbsp;str,int:&nbsp;Numero&nbsp;de&nbsp;inmueble<br>
+:param&nbsp;str,int:&nbsp;Numero&nbsp;de&nbsp;bloque<br>
+:param&nbsp;str:&nbsp;Escalera<br>
+:param&nbsp;str,int:&nbsp;Numero&nbsp;de&nbsp;planta<br>
+:param&nbsp;str,int:&nbsp;Numero&nbsp;de&nbsp;puerta<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaDNPPPCodigosJson"><strong>ConsultaDNPPPCodigosJson</strong></a>(municipio, poligono, parcela)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;los&nbsp;datos&nbsp;catastrales&nbsp;de&nbsp;un&nbsp;inmueble.<br>
+&nbsp;<br>
+Este&nbsp;servicio&nbsp;es&nbsp;idéntico&nbsp;al&nbsp;de&nbsp;"Consulta&nbsp;de&nbsp;DATOS&nbsp;CATASTRALES&nbsp;NO<br>
+PROTEGIDOS&nbsp;de&nbsp;un&nbsp;inmueble&nbsp;identificado&nbsp;por&nbsp;su&nbsp;localización"&nbsp;en&nbsp;todo<br>
+excepto&nbsp;en&nbsp;los&nbsp;parámetros&nbsp;de&nbsp;entrada.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Codigo&nbsp;del&nbsp;poligono<br>
+:param&nbsp;str:&nbsp;Codigo&nbsp;de&nbsp;la&nbsp;parcela<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaDNPRCCodigosJson"><strong>ConsultaDNPRCCodigosJson</strong></a>(municipio, rc)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;los&nbsp;datos&nbsp;catastrales&nbsp;de&nbsp;un&nbsp;inmueble,<br>
+&nbsp;<br>
+Este&nbsp;servicio&nbsp;es&nbsp;idéntico&nbsp;al&nbsp;de&nbsp;"Consulta&nbsp;de&nbsp;DATOS&nbsp;CATASTRALES&nbsp;NO<br>
+PROTEGIDOS&nbsp;de&nbsp;un&nbsp;inmueble&nbsp;identificado&nbsp;por&nbsp;su&nbsp;localización"<br>
+en&nbsp;todo&nbsp;excepto&nbsp;en&nbsp;los&nbsp;parámetros&nbsp;de&nbsp;entrada.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Referencia&nbsp;catastral<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaDNPRCJSon"><strong>ConsultaDNPRCJSon</strong></a>(municipio, rc)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;los&nbsp;datos&nbsp;catastrales&nbsp;no&nbsp;protegidos&nbsp;de&nbsp;un&nbsp;inmueble<br>
+&nbsp;<br>
+Este&nbsp;servicio&nbsp;es&nbsp;idéntico&nbsp;al&nbsp;de&nbsp;"Consulta&nbsp;de&nbsp;DATOS&nbsp;CATASTRALES&nbsp;NO<br>
+PROTEGIDOS&nbsp;de&nbsp;un&nbsp;inmueble&nbsp;identificado&nbsp;por&nbsp;su&nbsp;localización"&nbsp;en&nbsp;todo<br>
+excepto&nbsp;en&nbsp;los&nbsp;parámetros&nbsp;de&nbsp;entrada.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Referencia&nbsp;catastral<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaMunicipioCodigosJSon"><strong>ConsultaMunicipioCodigosJSon</strong></a>(municipio)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todos&nbsp;los&nbsp;nombres&nbsp;de&nbsp;los&nbsp;municipios&nbsp;de&nbsp;una&nbsp;provincia.<br>
+&nbsp;<br>
+Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todos&nbsp;los&nbsp;nombres&nbsp;de&nbsp;los&nbsp;municipios&nbsp;de&nbsp;una<br>
+provincia&nbsp;(parámetro&nbsp;"Provincia"),así&nbsp;como&nbsp;sus&nbsp;códigos&nbsp;(de&nbsp;Hacienda&nbsp;y<br>
+del&nbsp;INE),&nbsp;cuyo&nbsp;nombre&nbsp;Servicios&nbsp;web&nbsp;del&nbsp;<a href="#Catastro">Catastro</a>&nbsp;5&nbsp;contiene&nbsp;la&nbsp;cadena<br>
+del&nbsp;parámetro&nbsp;de&nbsp;entrada&nbsp;"Municipio".En&nbsp;caso&nbsp;de&nbsp;que&nbsp;este&nbsp;último<br>
+parámetro&nbsp;no&nbsp;tenga&nbsp;ningún&nbsp;valor,&nbsp;el&nbsp;servicio&nbsp;devuelve&nbsp;todos&nbsp;los<br>
+municipios&nbsp;de&nbsp;la&nbsp;provincia.También&nbsp;proporciona&nbsp;información&nbsp;de&nbsp;si&nbsp;existe<br>
+cartografía&nbsp;catastral&nbsp;(urbana&nbsp;o&nbsp;rústica)&nbsp;de&nbsp;cada&nbsp;municipio.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaMunicipioJSon"><strong>ConsultaMunicipioJSon</strong></a>(municipio=None)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todos&nbsp;los&nbsp;municipios&nbsp;de&nbsp;una&nbsp;provincia.<br>
+&nbsp;<br>
+Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todos&nbsp;los&nbsp;nombres&nbsp;de&nbsp;los&nbsp;municipios&nbsp;de&nbsp;una<br>
+provincia&nbsp;(parámetro&nbsp;"Provincia"),así&nbsp;como&nbsp;sus&nbsp;códigos&nbsp;(de&nbsp;Hacienda<br>
+y&nbsp;del&nbsp;INE),&nbsp;cuyo&nbsp;nombre&nbsp;Servicios&nbsp;web&nbsp;del&nbsp;<a href="#Catastro">Catastro</a>&nbsp;5&nbsp;contiene&nbsp;la&nbsp;cadena<br>
+del&nbsp;parámetro&nbsp;de&nbsp;entrada&nbsp;"Municipio".&nbsp;En&nbsp;caso&nbsp;de&nbsp;que&nbsp;este&nbsp;último<br>
+parámetro&nbsp;no&nbsp;tenga&nbsp;ningún&nbsp;valor,&nbsp;el&nbsp;servicio&nbsp;devuelve&nbsp;todos&nbsp;los<br>
+municipios&nbsp;de&nbsp;la&nbsp;&nbsp;provincia.También&nbsp;proporciona&nbsp;información&nbsp;de&nbsp;si<br>
+existe&nbsp;cartografía&nbsp;catastral&nbsp;(urbana&nbsp;o&nbsp;rústica)&nbsp;de&nbsp;cada&nbsp;municipio.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Opcional&nbsp;,&nbsp;nombre&nbsp;del&nbsp;municipio<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaNumeroCodigosJson"><strong>ConsultaNumeroCodigosJson</strong></a>(municipio, tipovia, nombrevia, numero)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;de&nbsp;la&nbsp;finca&nbsp;correspondiente.<br>
+&nbsp;<br>
+Proporciona,&nbsp;o&nbsp;bien&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;de&nbsp;la&nbsp;finca&nbsp;correspondiente<br>
+al&nbsp;contenido&nbsp;del&nbsp;parámetro&nbsp;"Número",&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;este&nbsp;exista,&nbsp;o&nbsp;bien<br>
+se&nbsp;devuelve&nbsp;un&nbsp;error&nbsp;("El&nbsp;número&nbsp;no&nbsp;existe")&nbsp;y&nbsp;se&nbsp;proporciona&nbsp;una&nbsp;lista<br>
+de&nbsp;los&nbsp;números&nbsp;más&nbsp;aproximados&nbsp;al&nbsp;solicitado,&nbsp;en&nbsp;un&nbsp;rango&nbsp;de&nbsp;5&nbsp;por&nbsp;arriba<br>
+y&nbsp;5&nbsp;por&nbsp;abajo.&nbsp;Por&nbsp;ejemplo,&nbsp;si&nbsp;se&nbsp;solicita&nbsp;el&nbsp;número&nbsp;10,&nbsp;y&nbsp;en&nbsp;esa&nbsp;vía<br>
+existen&nbsp;los&nbsp;números&nbsp;2,3,6,7,9,11,15&nbsp;y&nbsp;17,&nbsp;se&nbsp;devuelve&nbsp;una&nbsp;lista&nbsp;con&nbsp;los<br>
+números&nbsp;6,7,9,11&nbsp;y&nbsp;15.&nbsp;Junto&nbsp;con&nbsp;la&nbsp;lista&nbsp;de&nbsp;números,&nbsp;se&nbsp;proporcionan<br>
+las&nbsp;referencias&nbsp;catastrales&nbsp;de&nbsp;las&nbsp;fincas.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Tipo&nbsp;de&nbsp;la&nbsp;via<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;via<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaNumeroJSon"><strong>ConsultaNumeroJSon</strong></a>(municipio, tipovia, nombrevia, numero)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;de&nbsp;la&nbsp;finca&nbsp;correspondiente.<br>
+&nbsp;<br>
+Proporciona,o&nbsp;bien&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;de&nbsp;la&nbsp;finca&nbsp;correspondiente<br>
+al&nbsp;contenido&nbsp;del&nbsp;parámetro&nbsp;"Número",en&nbsp;caso&nbsp;de&nbsp;que&nbsp;este&nbsp;exista,o&nbsp;bien&nbsp;se<br>
+devuelve&nbsp;un&nbsp;error&nbsp;("El&nbsp;número&nbsp;no&nbsp;existe")&nbsp;y&nbsp;se&nbsp;proporciona&nbsp;una&nbsp;lista<br>
+de&nbsp;los&nbsp;números&nbsp;más&nbsp;aproximados&nbsp;al&nbsp;solicitado,&nbsp;en&nbsp;un&nbsp;rango&nbsp;de&nbsp;5&nbsp;por<br>
+arriba&nbsp;y&nbsp;5&nbsp;por&nbsp;abajo.&nbsp;Por&nbsp;ejemplo,&nbsp;si&nbsp;se&nbsp;solicita&nbsp;el&nbsp;número&nbsp;10,&nbsp;y&nbsp;en<br>
+esa&nbsp;vía&nbsp;existen&nbsp;los&nbsp;números&nbsp;2,3,6,7,9,11,15&nbsp;y&nbsp;17,&nbsp;se&nbsp;devuelve&nbsp;una&nbsp;lista<br>
+con&nbsp;los&nbsp;números&nbsp;6,7,9,11&nbsp;y&nbsp;15.Junto&nbsp;con&nbsp;la&nbsp;lista&nbsp;de&nbsp;números,&nbsp;se<br>
+proporcionan&nbsp;las&nbsp;referencias&nbsp;catastrales&nbsp;de&nbsp;las&nbsp;fincas.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Tipo&nbsp;d&nbsp;ela&nbsp;via<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;via<br>
+:param&nbsp;str,int:&nbsp;Numero&nbsp;del&nbsp;que&nbsp;se&nbsp;desea&nbsp;conocer&nbsp;la&nbsp;referencia<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaProvincia"><strong>ConsultaProvincia</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todas&nbsp;las&nbsp;provincias&nbsp;de&nbsp;España.<br>
+&nbsp;<br>
+Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todas&nbsp;las&nbsp;provincias&nbsp;españolas&nbsp;en<br>
+las&nbsp;que&nbsp;tiene&nbsp;competencia&nbsp;la&nbsp;Dirección&nbsp;general&nbsp;del&nbsp;<a href="#Catastro">Catastro</a>.<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaProvinciaJSon"><strong>ConsultaProvinciaJSon</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;las&nbsp;provincias.<br>
+&nbsp;<br>
+Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todas&nbsp;las&nbsp;provincias&nbsp;españolas&nbsp;en&nbsp;las&nbsp;que<br>
+tiene&nbsp;competencia&nbsp;la&nbsp;Dirección&nbsp;general&nbsp;del&nbsp;<a href="#Catastro">Catastro</a>.<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaRCCOORDistanciaJson"><strong>ConsultaRCCOORDistanciaJson</strong></a>(x, y)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;a&nbsp;partir&nbsp;de&nbsp;unas&nbsp;coordenadas.<br>
+&nbsp;<br>
+A&nbsp;partir&nbsp;de&nbsp;unas&nbsp;coordenadas&nbsp;(X&nbsp;e&nbsp;Y)&nbsp;y&nbsp;su&nbsp;sistema&nbsp;de&nbsp;referencia&nbsp;se<br>
+obtiene&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;de&nbsp;la&nbsp;parcela&nbsp;localizada&nbsp;en&nbsp;ese<br>
+punto&nbsp;así&nbsp;como&nbsp;el&nbsp;domicilio&nbsp;(municipio,&nbsp;calle&nbsp;y&nbsp;número&nbsp;o&nbsp;polígono,<br>
+parcela&nbsp;y&nbsp;municipio).&nbsp;En&nbsp;caso&nbsp;de&nbsp;no&nbsp;encontrar&nbsp;ninguna&nbsp;referencia<br>
+catastral&nbsp;en&nbsp;dicho&nbsp;punto,&nbsp;se&nbsp;buscará&nbsp;en&nbsp;un&nbsp;área&nbsp;cuadrada&nbsp;de&nbsp;50<br>
+metros&nbsp;de&nbsp;lado,&nbsp;centrada&nbsp;en&nbsp;dichas&nbsp;coordenadas,&nbsp;y&nbsp;se&nbsp;devolverá<br>
+la&nbsp;lista&nbsp;de&nbsp;referencias&nbsp;catastrales&nbsp;encontradas&nbsp;en&nbsp;dicha&nbsp;área.<br>
+&nbsp;<br>
+:param&nbsp;str,int:&nbsp;Sistema&nbsp;de&nbsp;coordenadas<br>
+:param&nbsp;str,int,float:&nbsp;Coordanda&nbsp;X<br>
+:param&nbsp;str,int,float:&nbsp;Coordanda&nbsp;Y<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaRCCOORJSon"><strong>ConsultaRCCOORJSon</strong></a>(x, y)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>A&nbsp;partir&nbsp;de&nbsp;unas&nbsp;coordenadas&nbsp;se&nbsp;obtiene&nbsp;la&nbsp;referencia&nbsp;catastral.<br>
+&nbsp;<br>
+A&nbsp;partir&nbsp;de&nbsp;unas&nbsp;coordenadas&nbsp;(X&nbsp;e&nbsp;Y)&nbsp;y&nbsp;su&nbsp;sistema&nbsp;de&nbsp;referencia&nbsp;se<br>
+obtiene&nbsp;la&nbsp;referencia&nbsp;catastral&nbsp;de&nbsp;la&nbsp;parcela&nbsp;localizada&nbsp;en&nbsp;ese&nbsp;punto<br>
+así&nbsp;como&nbsp;el&nbsp;domicilio&nbsp;(municipio,&nbsp;calle&nbsp;y&nbsp;número&nbsp;o&nbsp;polígono,&nbsp;parcela&nbsp;y<br>
+municipio).<br>
+&nbsp;<br>
+:param&nbsp;str,int:&nbsp;Sistema&nbsp;de&nbsp;coordenadas<br>
+:param&nbsp;str,int,float:&nbsp;Coordanda&nbsp;x<br>
+:param&nbsp;str,int,float:&nbsp;Coordenada&nbsp;Y<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaViaCodigosJSon"><strong>ConsultaViaCodigosJSon</strong></a>(municipio, tipovia=None, nombrevia=None)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;las&nbsp;vías&nbsp;de&nbsp;un&nbsp;municipio<br>
+&nbsp;<br>
+Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todas&nbsp;las&nbsp;vías&nbsp;de&nbsp;un&nbsp;municipio<br>
+(parámetros&nbsp;"Provincia"&nbsp;y&nbsp;"Municipio"),&nbsp;así&nbsp;como&nbsp;los&nbsp;códigos&nbsp;de&nbsp;las<br>
+mismas&nbsp;según&nbsp;la&nbsp;Dirección&nbsp;General&nbsp;del&nbsp;<a href="#Catastro">Catastro</a>&nbsp;(DGC),&nbsp;cuyo&nbsp;nombre<br>
+contiene&nbsp;la&nbsp;cadena&nbsp;del&nbsp;parámetro&nbsp;de&nbsp;entrada&nbsp;"NombreVia"&nbsp;y,&nbsp;en&nbsp;caso<br>
+de&nbsp;que&nbsp;el&nbsp;parámetro&nbsp;"TipoVia"&nbsp;contenga&nbsp;información,&nbsp;existe<br>
+coincidencia&nbsp;en&nbsp;el&nbsp;tipo&nbsp;de&nbsp;la&nbsp;vía.&nbsp;En&nbsp;caso&nbsp;de&nbsp;que&nbsp;el&nbsp;parámetro<br>
+"NombreVia"&nbsp;no&nbsp;tenga&nbsp;ningún&nbsp;valor,&nbsp;el&nbsp;servicio&nbsp;devuelve&nbsp;todas<br>
+las&nbsp;vías&nbsp;del&nbsp;municipio&nbsp;del&nbsp;"TipoVia"&nbsp;indicado.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Opcional,Tipo&nbsp;de&nbsp;via<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;via<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-ConsultaViaJSon"><strong>ConsultaViaJSon</strong></a>(municipio, tipovia=None, nombrevia=None)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todas&nbsp;las&nbsp;vías&nbsp;de&nbsp;un&nbsp;municipio.<br>
+&nbsp;<br>
+Proporciona&nbsp;un&nbsp;listado&nbsp;de&nbsp;todas&nbsp;las&nbsp;vías&nbsp;de&nbsp;un&nbsp;municipio&nbsp;(parámetros<br>
+"Provincia"&nbsp;y&nbsp;"Municipio"),&nbsp;así&nbsp;como&nbsp;los&nbsp;códigos&nbsp;de&nbsp;las&nbsp;mismas&nbsp;según&nbsp;la<br>
+Dirección&nbsp;General&nbsp;del&nbsp;<a href="#Catastro">Catastro</a>&nbsp;(DGC)&nbsp;,&nbsp;cuyo&nbsp;nombre&nbsp;contiene&nbsp;la&nbsp;cadena<br>
+del&nbsp;parámetro&nbsp;de&nbsp;entrada&nbsp;"NombreVia"&nbsp;y,&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;el&nbsp;parámetro<br>
+"TipoVia"&nbsp;contenga&nbsp;información,&nbsp;existe&nbsp;coincidencia&nbsp;en&nbsp;el&nbsp;tipo&nbsp;de&nbsp;la<br>
+vía.&nbsp;En&nbsp;caso&nbsp;de&nbsp;que&nbsp;el&nbsp;parámetro&nbsp;"NombreVia"&nbsp;no&nbsp;tenga&nbsp;ningún&nbsp;valor,&nbsp;el<br>
+servicio&nbsp;devuelve&nbsp;todas&nbsp;las&nbsp;vías&nbsp;del&nbsp;municipio&nbsp;del&nbsp;"TipoVia"&nbsp;indicado.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;municipio<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;un&nbsp;dicionario&nbsp;con&nbsp;los&nbsp;datos&nbsp;de&nbsp;la&nbsp;consutla<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="Catastro-Consulta_DNPPPJSon"><strong>Consulta_DNPPPJSon</strong></a>(municipio, poligono, parcela)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Proporciona&nbsp;los&nbsp;datos&nbsp;catastrales&nbsp;no&nbsp;protegidos&nbsp;de&nbsp;un&nbsp;inmueble<br>
+&nbsp;<br>
+Este&nbsp;servicio&nbsp;es&nbsp;idéntico&nbsp;al&nbsp;de&nbsp;"Consulta&nbsp;de&nbsp;DATOS&nbsp;CATASTRALES&nbsp;NO<br>
+PROTEGIDOS&nbsp;de&nbsp;un&nbsp;inmueble&nbsp;identificado&nbsp;por&nbsp;su&nbsp;localización"&nbsp;en&nbsp;todo<br>
+excepto&nbsp;en&nbsp;los&nbsp;parámetros&nbsp;de&nbsp;entrada.<br>
+&nbsp;<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;provincia<br>
+:param&nbsp;str:&nbsp;Nombre&nbsp;del&nbsp;municipio<br>
+:param&nbsp;str:&nbsp;Codigo&nbsp;del&nbsp;poligono<br>
+:param&nbsp;str:&nbsp;Codigo&nbsp;de&nbsp;la&nbsp;parcela<br>
+&nbsp;<br>
+:return:&nbsp;Retorna&nbsp;los&nbsp;datos&nbsp;que&nbsp;devuelve&nbsp;el&nbsp;servicio&nbsp;del&nbsp;catastro&nbsp;formateados&nbsp;en&nbsp;JSON<br>
+:return_type:&nbsp;json</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>home_url</strong> = 'http://ovc.catastro.meh.es/ovcservweb/'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
