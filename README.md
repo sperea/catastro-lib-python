@@ -3,7 +3,7 @@
 Library developed in python. This library allow to access the public web services of the Portal of Spanish Catastro and obtains the results in json format.
 
 
-Methods defined here:
+## Class methods defined here:
 
 ### ConsultaDNPLOCJson(provincia, municipio, sigla, calle, numero, bloque=None, escalera=None, planta=None, puerta=None)
     Proporciona la lista de todos los inmuebles coincidentes o sus datos.
@@ -27,8 +27,6 @@ Methods defined here:
      
     :return: Retorna los datos que devuelve el servicio del catastro formateados en JSON
     :return_type: json
-
-## Class methods defined here:
 
 ### ConsultaCPMRCJSon(municipio, srs, rc) from builtins.type
     Proporciona la localizacion de una parcela.
